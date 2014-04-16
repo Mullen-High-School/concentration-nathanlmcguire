@@ -31,6 +31,10 @@ public class Layout
 		System.out.println("3 | " + layout [2][0] + " | " + layout [2][1] + " | " + layout [2][2] + " | " + layout [2][3] + " | ");
 		System.out.println("  |      |      |      |      |");
 		System.out.println("  -----------------------------");
+		System.out.println("  |      |      |      |      |");
+		System.out.println("4 | " + layout [3][0] + " | " + layout [3][1] + " | " + layout [3][2] + " | " + layout [3][3] + " | ");
+		System.out.println("  |      |      |      |      |");
+		System.out.println("  -----------------------------");
 		System.out.println();
 		}	
 	}
