@@ -7,6 +7,8 @@ public class PlayGame
 		Layout.display();
 		Choosing.inputFirstChoice();
 		Choosing.inputSecondChoice();
+		Themes.chooseTheme();
+		Themes.shuffleTerms();
 		}
 	
 	public static boolean isValidMove()
