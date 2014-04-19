@@ -1,7 +1,13 @@
+import java.util.ArrayList;
+import java.util.Collections;
+
 
 public class Layout
 	{
 	static String [][] layout;
+	static ArrayList<String> shuffledCards = new ArrayList<String>();
+	static String cardToBePlaced;
+
 	
 	public static void createLayout()
 		{
@@ -37,6 +43,26 @@ public class Layout
 		System.out.println("  -----------------------------");
 		System.out.println();
 		}	
+	
+
+	
+	public static void populateDeck()
+		{
+		for(String cards : Themes.themedCards)
+			{
+			shuffledCards.add(cards);
+			}
+		}
+	
+	public static void shuffle()
+		{
+		Collections.shuffle(shuffledCards);	
+		}
+	
+public static void deal()
+		{
+		cardToBePlaced = shuffledCards.get(0);
+		}
 	}
 
 	
