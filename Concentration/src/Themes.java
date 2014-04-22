@@ -16,6 +16,7 @@ public class Themes
 	static String names [] = {"Lisa", "Lisa", "Mary", "Mary", "Bill", "Bill", "Suzy", "Suzy",
 			"Jeff", "Jeff", "John", "John", "Emma", "Emma", "Dave", "Dave"};
 	
+	static String [] loader = new String [8];
 	
 	public static void fillLayout()
 		{
@@ -29,13 +30,16 @@ public class Themes
 		{
 		Collections.shuffle(loader);	
 		}
+	
 	public static void loadCards()
+		int counter = 0;
 		{
 		for(int i=0;i<3;i++)
 			{
 			for(int j=0;j<3;j++)
 				{
-				board[i][j] = " ";
+				Layout.layout[i][j] = loader[counter];
+				counter++;
 				}
 			}
 		}

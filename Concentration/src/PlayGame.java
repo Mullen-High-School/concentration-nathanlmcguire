@@ -27,40 +27,40 @@ public class PlayGame
 				for(String array : Themes.animals)
 					{
 					loader.add(array);
-					break;
 					}
+				break;
 				}
 			case 2:
 				{
 				for(String array : Themes.food)
 					{
 					loader.add(array);
-					break;
 					}
+				break;
 				}
 			case 3:
 				{
 				for(String array : Themes.places)
 					{
 					loader.add(array);
-					break;
 					}
+				break;
 				}
 			case 4:
 				{
 				for(String array : Themes.bodyParts)
 					{
 					loader.add(array);
-					break;
 					}
+				break;
 				}
 			case 5:
 				{
 				for(String array : Themes.names)
 					{
 					loader.add(array);
-					break;
 					}
+				break;
 				}
 			}
 		}
