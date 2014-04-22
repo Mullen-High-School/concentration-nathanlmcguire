@@ -4,14 +4,11 @@ import java.util.Collections;
 
 public class Layout
 	{
-	static String [][] layout;
-	static ArrayList<String> shuffledCards = new ArrayList<String>();
-	static String cardToBePlaced;
-
+	static String [][] layout = new String [4] [4];
 	
-	public static void createLayout()
+	public static void createBlankLayout()
 		{
-			layout = new String [4][4];
+			//layout = new String [4][4];
 			for(int i = 0; i < 4; i++)
 				{
 				for(int j =0; j < 4; j++)
@@ -46,23 +43,9 @@ public class Layout
 	
 
 	
-	public static void populateDeck()
-		{
-		for(String cards : Themes.themedCards)
-			{
-			shuffledCards.add(cards);
-			}
-		}
+
 	
-	public static void shuffle()
-		{
-		Collections.shuffle(shuffledCards);	
-		}
-	
-public static void deal()
-		{
-		cardToBePlaced = shuffledCards.get(0);
-		}
+
 	}
 
 	
