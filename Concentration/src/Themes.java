@@ -35,20 +35,45 @@ public class Themes
 				for(String array : animals)
 					{
 					loader.add(array);
+					break;
 					}
 				}
-			
-		
-		
-	public static void fillLayout()
-		{
-		for(String array : nameOfArray)
-			{
-			loader.add(array);
+			case 2:
+				{
+				for(String array : food)
+					{
+					loader.add(array);
+					break;
+					}
+				}
+			case 3:
+				{
+				for(String array : places)
+					{
+					loader.add(array); 
+					break;
+					}
+				}
+			case 4:
+				{
+				for(String array : bodyParts)
+					{
+					loader.add(array);
+					break;
+					}
+				}
+			case 5:
+				{
+				for(String array : names)
+					{
+					loader.add(array);
+					break;
+					}
+				}
 			}
 		}
 	
-	public static void shuffle()
+	public static void shuffleTerms()
 		{
 		Collections.shuffle(loader);	
 		}
