@@ -9,52 +9,45 @@ public class Choosing
 	
 	public static void inputFirstChoice()	
 		{			
-//		do 
-//			{
-			System.out.println("Please enter the row and column of your move (e.g. A1)");
-			Scanner input = new Scanner(System.in);
-			firstChoice = input.nextLine();
-			switch (firstChoice.substring(0,1))
+		System.out.println("Please enter the row and column of your move (e.g. A1)");
+		Scanner input = new Scanner(System.in);
+		firstChoice = input.nextLine();
+		switch (firstChoice.substring(0,1))
+			{
+			case "A":
+			case "a":
 				{
-				case "A":
-				case "a":
-					{
-					firstRowChoice = 0;
-					break;
-					}
-				case "B":
-				case "b":
-					{
-					firstRowChoice = 1;
-					break;
-					}
-				case "C": 
-				case "c":
-					{
-					firstRowChoice = 2;
-					break;
-					}
-				case "D": 
-				case "d":
-					{
-					firstRowChoice = 3;
-					break;
-					}
+				firstRowChoice = 0;
+				break;
 				}
-			
-			firstColumnChoice = Integer.parseInt(firstChoice.substring(1)) - 1;
-			System.out.println();
-			Layout.layout[firstRowChoice][firstColumnChoice] = 
-					Themes.layoutAnswers[firstRowChoice][firstColumnChoice];
-			Layout.display();
+			case "B":
+			case "b":
+				{
+				firstRowChoice = 1;
+				break;
+				}
+			case "C": 
+			case "c":
+				{
+				firstRowChoice = 2;
+				break;
+				}
+			case "D": 
+			case "d":
+				{
+				firstRowChoice = 3;
+				break;
+				}
 			}
-//				while (PlayGame.isValidMove());
-//		}
-	
+		
+		firstColumnChoice = Integer.parseInt(firstChoice.substring(1)) - 1;
+		System.out.println();
+		Layout.layout[firstRowChoice][firstColumnChoice] = 
+				Themes.layoutAnswers[firstRowChoice][firstColumnChoice];
+		Layout.display();
+		}
+
 	public static void inputSecondChoice()
-	
-//		{			
-//		do 
 			{
 			System.out.println("Please enter the row and column of your move (e.g. A1)");
 			Scanner input = new Scanner(System.in);
@@ -94,8 +87,6 @@ public class Choosing
 			PlayGame.numberOfAttempts++;
 			Layout.display();
 			}
-//				while (PlayGame.isValidMove());
-//		}
 	
 	public static void compareChoices()
 		{
@@ -124,8 +115,7 @@ public class Choosing
 				}
 			Layout.layout[firstRowChoice][firstColumnChoice] = "    ";
 			Layout.layout[secondRowChoice][secondColumnChoice] = "    ";
-			Layout.display();
-				
+			Layout.display();	
 			}
 		}
 	}

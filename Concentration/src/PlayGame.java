@@ -27,15 +27,15 @@ public class PlayGame
 		System.out.println("See if you can beat that record.");
 		}
 	
-	public static boolean isValidMove()
-		{
-		if (! Layout.layout [Choosing.firstRowChoice][Choosing.firstColumnChoice].equals("    ") || 
-				! Layout.layout [Choosing.secondRowChoice][Choosing.secondColumnChoice].equals("    "))
-			{
-			return true;
-			}
-		return false;
-		}
+//	public static boolean isValidMove()
+//		{
+//		if (! Layout.layout [Choosing.firstRowChoice][Choosing.firstColumnChoice].equals("    ") || 
+//				! Layout.layout [Choosing.secondRowChoice][Choosing.secondColumnChoice].equals("    "))
+//			{
+//			return true;
+//			}
+//		return false;
+//		}
 	}
 
 	

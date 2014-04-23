@@ -8,14 +8,13 @@ public class Layout
 	
 	public static void createBlankLayout()
 		{
-			//layout = new String [4][4];
-			for(int i = 0; i < 4; i++)
+		for(int i = 0; i < 4; i++)
+			{
+			for(int j =0; j < 4; j++)
 				{
-				for(int j =0; j < 4; j++)
-					{
-					layout [i][j] = "    ";
-					}
+				layout [i][j] = "    ";
 				}
+			}
 		}
 
 	public static void display()
@@ -40,12 +39,6 @@ public class Layout
 		System.out.println("  -----------------------------");
 		System.out.println();
 		}	
-	
-
-	
-
-	
-
 	}
 
 	

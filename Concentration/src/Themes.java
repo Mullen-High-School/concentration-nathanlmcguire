@@ -28,7 +28,6 @@ public class Themes
 		chooseTheme();
 		shuffle();
 		loadCards();
-		//layoutTester();
 		}
 	
 	public static void chooseTheme()
@@ -97,17 +96,6 @@ public class Themes
 				{
 				layoutAnswers[i][j] = loader.get(counter);
 				counter++;
-				}
-			}
-		}
-	
-	public static void layoutTester()
-		{
-		for(int i=0;i<4;i++)
-			{
-			for(int j=0;j<4;j++)
-				{
-				System.out.println(layoutAnswers[i][j]);
 				}
 			}
 		}
