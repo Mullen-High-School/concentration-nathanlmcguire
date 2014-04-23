@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class Choosing
 	{
@@ -7,8 +8,8 @@ public class Choosing
 	
 	public static void inputFirstChoice()	
 		{			
-		do 
-			{
+//		do 
+//			{
 			System.out.println("Please enter the row and column of your move (e.g. A1)");
 			Scanner input = new Scanner(System.in);
 			firstChoice = input.nextLine();
@@ -42,18 +43,18 @@ public class Choosing
 			
 			firstColumnChoice = Integer.parseInt(firstChoice.substring(1)) - 1;
 			System.out.println();
-			Layout.layout[firstRowChoice][firstRowChoice] = 
+			Layout.layout[firstRowChoice][firstColumnChoice] = 
 					Themes.layoutAnswers[firstRowChoice][firstColumnChoice];
 			Layout.display();
-			}
-				while (PlayGame.isValidMove());
+//			}
+//				while (PlayGame.isValidMove());
 		}
 	
 	public static void inputSecondChoice()
 	
 		{			
-		do 
-			{
+//		do 
+//			{
 			System.out.println("Please enter the row and column of your move (e.g. A1)");
 			Scanner input = new Scanner(System.in);
 			secondChoice = input.nextLine();
@@ -91,8 +92,8 @@ public class Choosing
 					Themes.layoutAnswers[secondRowChoice][secondColumnChoice];
 			Layout.display();
 			}
-				while (PlayGame.isValidMove());
-		}
+//				while (PlayGame.isValidMove());
+//		}
 	
 	public static void compareChoices()
 		{
@@ -104,6 +105,19 @@ public class Choosing
 		else
 			{
 			System.out.println("Sorry");
+			// insert delay device
+			try 
+				{
+				TimeUnit.SECONDS.sleep(3);
+				}
+			catch (InterruptedException e) 
+				{
+				//Handle exception
+				}
+			Layout.layout[firstRowChoice][firstColumnChoice] = "    ";
+			Layout.layout[secondRowChoice][secondColumnChoice] = "    ";
+			Layout.display();
+				
 			}
 		}
 	}
