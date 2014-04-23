@@ -42,11 +42,15 @@ public class Choosing
 			
 			firstColumnChoice = Integer.parseInt(firstChoice.substring(1)) - 1;
 			System.out.println();
+			Layout.layout[firstRowChoice][firstRowChoice] = 
+					Themes.layoutAnswers[firstRowChoice][firstColumnChoice];
+			Layout.display();
 			}
 				while (PlayGame.isValidMove());
 		}
 	
-	public static void inputSecondChoice()	
+	public static void inputSecondChoice()
+	
 		{			
 		do 
 			{
@@ -83,7 +87,23 @@ public class Choosing
 			
 			secondColumnChoice = Integer.parseInt(secondChoice.substring(1)) - 1;
 			System.out.println();
+			Layout.layout[secondRowChoice][secondColumnChoice] = 
+					Themes.layoutAnswers[secondRowChoice][secondColumnChoice];
+			Layout.display();
 			}
 				while (PlayGame.isValidMove());
+		}
+	
+	public static void compareChoices()
+		{
+		if (Layout.layout[firstRowChoice][firstColumnChoice].equals
+		                                  (Layout.layout[secondRowChoice][secondColumnChoice]))
+			{
+			System.out.println("You have a match!");
+			}
+		else
+			{
+			System.out.println("Sorry");
+			}
 		}
 	}

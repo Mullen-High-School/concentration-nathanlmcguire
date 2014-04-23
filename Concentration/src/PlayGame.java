@@ -10,8 +10,9 @@ public class PlayGame
 		Themes.setupAnswers();
 		Layout.createBlankLayout();
 		Layout.display();
-//		Choosing.inputFirstChoice();
-//		Choosing.inputSecondChoice();
+		Choosing.inputFirstChoice();
+		Choosing.inputSecondChoice();
+		Choosing.compareChoices();
 		}
 	
 	public static boolean isValidMove()
