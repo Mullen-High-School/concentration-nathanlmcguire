@@ -5,6 +5,7 @@ public class Choosing
 	{
 	static String firstChoice, secondChoice;
 	static int firstRowChoice, firstColumnChoice, secondRowChoice, secondColumnChoice;
+	static int numberOfMatches = 0;
 	
 	public static void inputFirstChoice()	
 		{			
@@ -46,15 +47,15 @@ public class Choosing
 			Layout.layout[firstRowChoice][firstColumnChoice] = 
 					Themes.layoutAnswers[firstRowChoice][firstColumnChoice];
 			Layout.display();
-//			}
+			}
 //				while (PlayGame.isValidMove());
-		}
+//		}
 	
 	public static void inputSecondChoice()
 	
-		{			
+//		{			
 //		do 
-//			{
+			{
 			System.out.println("Please enter the row and column of your move (e.g. A1)");
 			Scanner input = new Scanner(System.in);
 			secondChoice = input.nextLine();
@@ -90,6 +91,7 @@ public class Choosing
 			System.out.println();
 			Layout.layout[secondRowChoice][secondColumnChoice] = 
 					Themes.layoutAnswers[secondRowChoice][secondColumnChoice];
+			PlayGame.numberOfAttempts++;
 			Layout.display();
 			}
 //				while (PlayGame.isValidMove());
@@ -100,15 +102,21 @@ public class Choosing
 		if (Layout.layout[firstRowChoice][firstColumnChoice].equals
 		                                  (Layout.layout[secondRowChoice][secondColumnChoice]))
 			{
-			System.out.println("You have a match!");
+			numberOfMatches++;
+			if ( numberOfMatches == 1)
+				{
+				System.out.println("Congratulations, you have " + numberOfMatches + " match.");
+				}
+			else
+				{
+				System.out.println("Congratulations, you have " + numberOfMatches + " matches.");
+				}
 			}
 		else
 			{
-			System.out.println("Sorry");
-			// insert delay device
 			try 
 				{
-				TimeUnit.SECONDS.sleep(3);
+				TimeUnit.SECONDS.sleep(2);
 				}
 			catch (InterruptedException e) 
 				{
