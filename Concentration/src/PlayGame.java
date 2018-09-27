@@ -3,12 +3,13 @@ public class PlayGame
 	{
 	public static void main(String[] args)
 		{
+		Themes.chooseTheme();
+		Themes.shuffleTerms();
 		Layout.createLayout();
 		Layout.display();
 		Choosing.inputFirstChoice();
-		Choosing.inputSecondChoice();
-		Themes.chooseTheme();
-		Themes.shuffleTerms();
+		//Choosing.inputSecondChoice();
+		
 		}
 	
 	public static boolean isValidMove()

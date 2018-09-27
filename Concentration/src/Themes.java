@@ -26,6 +26,11 @@ public class Themes
 	public static void chooseTheme()
 		{
 		System.out.println("Which theme would you like to play with?");
+		System.out.println("(1)  animals");
+		System.out.println("(2)  food");
+		System.out.println("(3)  places");
+		System.out.println("(4)  body parts");
+
 		Scanner input = new Scanner(System.in);
 		theme = input.nextInt();
 		switch(theme)
