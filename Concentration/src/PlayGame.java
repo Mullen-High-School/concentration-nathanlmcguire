@@ -8,8 +8,8 @@ public class PlayGame
 		Layout.createLayout();
 		Layout.display();
 		Choosing.inputFirstChoice();
-		//Choosing.inputSecondChoice();
-		
+		Choosing.inputSecondChoice();
+		Layout.display();	
 		}
 	
 	public static boolean isValidMove()

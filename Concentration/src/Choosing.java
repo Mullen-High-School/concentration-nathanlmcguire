@@ -84,6 +84,7 @@ public class Choosing
 			secondColumnChoice = Integer.parseInt(secondChoice.substring(1)) - 1;
 			System.out.println();
 			}
-				while (PlayGame.isValidMove());
+		while (PlayGame.isValidMove());
+		Layout.display();
 		}
 	}
