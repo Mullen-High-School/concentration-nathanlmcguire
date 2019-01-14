@@ -1,18 +1,20 @@
+import java.util.ArrayList;
+import java.util.Collections;
+
 
 public class Layout
 	{
-	static String [][] layout;
+	static String [][] layout = new String [4] [4];
 	
-	public static void createLayout()
+	public static void createBlankLayout()
 		{
-			layout = new String [4][4];
-			for(int i = 0; i < 4; i++)
+		for(int i = 0; i < 4; i++)
+			{
+			for(int j =0; j < 4; j++)
 				{
-				for(int j =0; j < 4; j++)
-					{
-					layout [i][j] = "    ";
-					}
+				layout [i][j] = "    ";
 				}
+			}
 		}
 
 	public static void display()
